@@ -52,30 +52,28 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#micarrusel"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Quienes Somos</a>
+                <a class="nav-link" href="#quienessomos">Quienes Somos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Destacados</a>
+                <a class="nav-link" href="#destacados">Destacados</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-disabled="true">Contacto</a>
+                <a class="nav-link" href="#contacto">Contacto</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <style>
-      .carousel-inner img {
-        width: 100%;
-        max-height: 760px;
-      }
-    </style>
+
     <section>
       <!-- Carrousel -->
       <div id="micarrusel" class="carousel slide" data-bs-ride="carousel">
@@ -123,11 +121,12 @@
       </div>
       <!-- fin Carrousel -->
     </section>
+    <br id="quienessomos" />
     <div class="container">
       <!-- Inicio Seccion Quienes somos -->
 
       <section>
-        <div class="text-center py-5 text-light" id="quienessomos">
+        <div class="text-center py-5 text-light">
           <h3>Quienes Somos?</h3>
         </div>
         <hr class="text-light py-3" />
@@ -136,7 +135,7 @@
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="features__inner">
-                <div class="features__inner-icon text-center colorturquesa">
+                <div class="features__inner-icon text-center bg-info">
                   <i class="fa-solid fa-plane fa-lg"></i>
                 </div>
 
@@ -164,14 +163,14 @@
                   numquam doloremque nihil magnam eius veniam dignissimos dolor
                   dicta distinctio aperiam odio saepe. Fugit, quibusdam aliquam?
                 </p>
-                <div class="features__inner-icon text-center colorturquesa">
+                <div class="features__inner-icon text-center bg-info">
                   <i class="fa-solid fa-mountain fa-lg"></i>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
               <div class="features__inner">
-                <div class="features__inner-icon text-center colorturquesa">
+                <div class="features__inner-icon text-center bg-info">
                   <i class="fa-solid fa-route fa-lg"></i>
                 </div>
                 <p>
@@ -193,16 +192,16 @@
       <!-- Fin Seccion Quienes Somos -->
 
       <!-- Seccion Destacados -->
-      <br />
+      <br id="destacados" /><br />
       <section>
-        <div class="text-center py-3 text-light" id="destacados">
+        <div class="text-center py-3 text-light">
           <h3>Destacados</h3>
         </div>
         <hr class="text-light py-3" />
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
           <div class="col">
-            <div class="card">
+            <div class="card bg-info">
               <div class="imagen">
                 <img
                   src="./assets/img/card1.jpg"
@@ -221,7 +220,7 @@
           </div>
 
           <div class="col">
-            <div class="card">
+            <div class="card bg-info">
               <div class="imagen">
                 <img
                   src="./assets/img/card2.jpg"
@@ -239,7 +238,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div class="card bg-info">
               <div class="imagen">
                 <img src="./assets/img/card3.jpg" class="card-img-top item item2
                 alt="Colaciones" />
@@ -256,7 +255,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card">
+            <div class="card bg-info">
               <div class="imagen">
                 <img
                   src="./assets/img/card4.jpg"
@@ -309,7 +308,7 @@
 
     <!-- Inicio Footer -->
 
-    <section class="colorturquesa">
+    <section class="bg-info">
       <div class="container">
         <footer
           class="d-flex flex-wrap justify-content-between align-items-center py-3 px-5"
@@ -350,6 +349,31 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
+        });
+      });
+    </script>
 
     <script src="./assets/js/scripts.js"></script>
   </body>
