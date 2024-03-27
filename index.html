@@ -130,7 +130,9 @@
         </div>
         <hr class="text-light py-3" />
         <!-- Features hola que tal  -->
-        <section class="container-fluid features text-light">
+        <section
+          class="container-fluid features text-light d-none d-sm-none d-md-block"
+        >
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="features__inner">
@@ -138,7 +140,7 @@
                   <i class="fa-solid fa-plane fa-lg"></i>
                 </div>
 
-                <p class="justi">
+                <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dolores, blanditiis magnam. Reiciendis neque, doloremque
                   quaerat impedit, minus quisquam inventore dolorem aperiam amet
@@ -152,7 +154,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
               <div class="features__inner">
-                <p class="justi">
+                <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dolores, blanditiis magnam. Reiciendis neque, doloremque
                   quaerat impedit, minus quisquam inventore dolorem aperiam amet
@@ -172,7 +174,7 @@
                 <div class="features__inner-icon text-center bg-info">
                   <i class="fa-solid fa-route fa-lg"></i>
                 </div>
-                <p class="justi">
+                <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Reprehenderit ullam et molestias consectetur, quod libero.
                   Recusandae repudiandae, exercitationem dolor accusantium
@@ -210,7 +212,7 @@
               </div>
               <div class="card-body colorturquesa text-light">
                 <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
-                <p class="card-text">
+                <p class="card-text justi">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -287,15 +289,15 @@
         <form class="row g-3 text-light py-4">
           <div class="col-12">
             <label for="inputAddress" class="form-label">Nombre</label>
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control" required />
           </div>
           <div class="col-12">
             <label class="form-label">Asunto</label>
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control" required />
           </div>
           <div class="mb-3">
             <label class="form-label">Mensaje</label>
-            <textarea class="form-control" rows="3"></textarea>
+            <textarea class="form-control" rows="3" required></textarea>
           </div>
 
           <div class="my-3">
@@ -378,6 +380,30 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA=="
@@ -400,7 +426,7 @@
   </body>
 </html>
 
-<!-- Modal -->
+<!--------------- Modal ----------------->
 <div
   class="modal fade"
   id="exampleModal"
@@ -435,3 +461,4 @@
     </div>
   </div>
 </div>
+<!-----------------Fin Modal----------------->
