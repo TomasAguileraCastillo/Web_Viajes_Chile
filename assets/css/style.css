@@ -1,5 +1,17 @@
+/* Estilo de fuente */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.fuente {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
 body {
   background-color: #000;
+  font-family: "Raleway", "Open Sans";
 }
 
 /***Modificacion de navbar ***/
