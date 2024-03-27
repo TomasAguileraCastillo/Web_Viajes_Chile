@@ -1,0 +1,33 @@
+body {
+  background-color: #000;
+}
+
+/***Modificacion de navbar ***/
+
+.navi {
+  background-color: transparent !important;
+}
+
+.colorturquesa {
+  background-color: #0dcaf0;
+}
+
+/*
+.imgcards {
+  height: 150px;
+  width: 100%;
+}*/
+
+.imagen {
+  display: flex;
+}
+
+.item {
+  width: 100%;
+  height: 150px;
+  background: lightgrey;
+}
+
+.item2 {
+  object-fit: cover;
+}
