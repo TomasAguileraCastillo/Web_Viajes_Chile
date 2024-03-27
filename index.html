@@ -73,7 +73,6 @@
         </div>
       </nav>
     </header>
-
     <section>
       <!-- Carrousel -->
       <div id="micarrusel" class="carousel slide" data-bs-ride="carousel">
@@ -139,7 +138,7 @@
                   <i class="fa-solid fa-plane fa-lg"></i>
                 </div>
 
-                <p>
+                <p class="justi">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dolores, blanditiis magnam. Reiciendis neque, doloremque
                   quaerat impedit, minus quisquam inventore dolorem aperiam amet
@@ -153,7 +152,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
               <div class="features__inner">
-                <p>
+                <p class="justi">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dolores, blanditiis magnam. Reiciendis neque, doloremque
                   quaerat impedit, minus quisquam inventore dolorem aperiam amet
@@ -173,7 +172,7 @@
                 <div class="features__inner-icon text-center bg-info">
                   <i class="fa-solid fa-route fa-lg"></i>
                 </div>
-                <p>
+                <p class="justi">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Reprehenderit ullam et molestias consectetur, quod libero.
                   Recusandae repudiandae, exercitationem dolor accusantium
@@ -240,8 +239,11 @@
           <div class="col">
             <div class="card bg-info">
               <div class="imagen">
-                <img src="./assets/img/card3.jpg" class="card-img-top item item2
-                alt="Colaciones" />
+                <img
+                  src="./assets/img/card3.jpg"
+                  class="card-img-top item item2"
+                  alt="Colaciones"
+                />
               </div>
               <div class="card-body colorturquesa text-light">
                 <h5 class="card-title">
@@ -297,7 +299,14 @@
           </div>
 
           <div class="my-3">
-            <button type="button" class="btn btn-info text-light">
+            <br />
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-info text-light"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
               Enviar
             </button>
           </div>
@@ -319,22 +328,42 @@
 
           <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li class="ms-3">
-              <a class="text-light" href="#"
+              <a
+                class="text-light btn"
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="Github"
                 ><i class="fa-brands fa-github fa-lg"></i
               ></a>
             </li>
             <li class="ms-3">
-              <a class="text-light" href="#"
+              <a
+                class="text-light btn"
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="Linkedin"
                 ><i class="fa-brands fa-linkedin fa-lg"></i
               ></a>
             </li>
             <li class="ms-3">
-              <a class="text-light" href="#"
+              <a
+                class="text-light btn"
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="twitter"
                 ><i class="fa-brands fa-twitter fa-lg"></i
               ></a>
             </li>
             <li class="ms-3">
-              <a class="text-light" href="#"
+              <a
+                class="text-light btn"
+                href="#"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="Facebook"
                 ><i class="fa-brands fa-facebook fa-lg"></i
               ></a>
             </li>
@@ -355,26 +384,54 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <script>
-      $(document).ready(function () {
-        $("a").on("click", function (event) {
-          if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                window.location.hash = hash;
-              }
-            );
-          }
-        });
-      });
+      /***Implementacion de Toolstip */
+
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
     </script>
 
     <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Viajes Chile!</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        Su mensaje, se ha enviado correctamentes, <br />
+        <strong>Muy pronto nos pondremos en contacto Con Ud. !!</strong>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-info text-light"
+          data-bs-dismiss="modal"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
