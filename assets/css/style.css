@@ -14,7 +14,7 @@ body {
   font-family: "Raleway", "Open Sans";
 }
 
-/***Modificacion de navbar ***/
+/*Modificacion de navbar */
 
 .navi {
   background-color: transparent !important;
@@ -47,11 +47,11 @@ body {
 
 .zoom {
   transition: transform 0.2s;
-  margin: 0 auto;
+  margin: 0px;
 }
 
 .zoom:hover {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5);
+  transform: scale(1.14);
 }
