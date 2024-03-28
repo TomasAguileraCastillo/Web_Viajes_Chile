@@ -15,7 +15,11 @@ Proyecto desarrollado para la habilitación de una Landing_Page, "La agencia, Vi
 
 ## Vista previa del proyecto
 
-Si gusta, aquí dejo algunas imágenes del proyecto realizado, las recomiendo:
+Puedes acceder al link de GitHub Pages, para ver su funcionamiento en Vivo del Landing_page de Viajes Chile [Aqui](https://tomasaguileracastillo.github.io/Web_Viajes_Chile/)
+
+Tambien si gustas, aquí te dejo algunas imágenes del proyecto realizado, las recomiendo.
+
+<br>
 
 ![Captura del proyecto](https://github.com/TomasAguileraCastillo/Web_Viajes_Chile/blob/main/imagenes_del_proyecto/Captura.JPG?raw=true)
 ![Captura del proyecto](https://github.com/TomasAguileraCastillo/Web_Viajes_Chile/blob/main/imagenes_del_proyecto/Captura2.JPG?raw=true)
