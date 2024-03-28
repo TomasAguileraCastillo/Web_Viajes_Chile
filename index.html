@@ -75,7 +75,11 @@
     </header>
     <section>
       <!-- Carrousel -->
-      <div id="micarrusel" class="carousel slide" data-bs-ride="carousel">
+      <div
+        id="micarrusel"
+        class="carousel slide border-bottom"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
@@ -124,15 +128,13 @@
     <div class="container">
       <!-- Inicio Seccion Quienes somos -->
 
-      <section>
+      <section class="d-none d-sm-none d-md-block">
         <div class="text-center py-5 text-light">
           <h3>Quienes Somos?</h3>
         </div>
         <hr class="text-light py-3" />
-        <!-- Features hola que tal  -->
-        <section
-          class="container-fluid features text-light d-none d-sm-none d-md-block"
-        >
+
+        <section class="container-fluid features text-light">
           <div class="row">
             <div class="col-lg-4 col-md-6">
               <div class="features__inner">
@@ -188,7 +190,6 @@
             </div>
           </div>
         </section>
-        <!-- Fin Hola que tal -->
       </section>
       <!-- Fin Seccion Quienes Somos -->
 
@@ -321,53 +322,62 @@
 
     <section class="bg-info">
       <div class="container">
-        <footer
-          class="d-flex flex-wrap justify-content-between align-items-center py-3 px-5"
-        >
-          <div class="col-md-4 d-flex align-items-center">
-            <h4 class="mb-3 mb-md-0 text-light">VIAJES CHILE</h4>
-          </div>
+        <footer class="d-flex flex-wrap justify-content-center py-3">
+          <a
+            href=""
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+          >
+            <span class="fs-4 text-light zoom">VIAJES CHILE</span>
+          </a>
 
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
               <a
-                class="text-light btn"
                 href="#"
+                class="btn btn-info text-light"
+                type="button"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 data-bs-title="Github"
-                ><i class="fa-brands fa-github fa-lg"></i
-              ></a>
+              >
+                <i class="fa-brands fa-github fa-lg"></i>
+              </a>
             </li>
-            <li class="ms-3">
+            <li class="nav-item">
               <a
-                class="text-light btn"
                 href="#"
+                class="btn btn-info text-light"
+                type="button"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 data-bs-title="Linkedin"
-                ><i class="fa-brands fa-linkedin fa-lg"></i
-              ></a>
+              >
+                <i class="fa-brands fa-linkedin fa-lg"></i>
+              </a>
             </li>
-            <li class="ms-3">
+            <li class="nav-item">
               <a
-                class="text-light btn"
                 href="#"
+                class="btn btn-info text-light"
+                type="button"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
-                data-bs-title="twitter"
-                ><i class="fa-brands fa-twitter fa-lg"></i
-              ></a>
+                data-bs-title="X (Twitter)"
+              >
+                <i class="fa-brands fa-twitter fa-lg"></i>
+              </a>
             </li>
-            <li class="ms-3">
+            <li class="nav-item">
               <a
-                class="text-light btn"
                 href="#"
+                class="btn btn-info text-light"
+                type="button"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 data-bs-title="Facebook"
-                ><i class="fa-brands fa-facebook fa-lg"></i
-              ></a>
+              >
+                <i class="fa-brands fa-facebook fa-lg"></i>
+              </a>
             </li>
           </ul>
         </footer>
@@ -375,41 +385,13 @@
     </section>
 
     <!-- Fin Footer -->
+    <!-- Inicio JS Bootstrap 5.3 -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-      (function () {
-        "use strict";
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll(".needs-validation");
-
-        // Loop over them and prevent submission
-        Array.from(forms).forEach((form) => {
-          form.addEventListener(
-            "submit",
-            (event) => {
-              if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-
-              form.classList.add("was-validated");
-            },
-            false
-          );
-        });
-      })();
-    </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- Fin js Bootstrap 5.3 -->
 
     <script>
       /***Implementacion de Toolstip */
@@ -421,8 +403,9 @@
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
     </script>
-
+    <!-- Funcinoalidades Propias -->
     <script src="./assets/js/scripts.js"></script>
+    <!-- Fin Funcionalidades Porpias -->
   </body>
 </html>
 

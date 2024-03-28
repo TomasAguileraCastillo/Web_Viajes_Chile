@@ -38,6 +38,20 @@ body {
 .item2 {
   object-fit: cover;
 }
+
 .justi {
   text-align: justify;
+}
+
+/**Estilo Zoom**/
+
+.zoom {
+  transition: transform 0.2s;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
 }
